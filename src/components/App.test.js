@@ -13,11 +13,11 @@ describe("App", () => {
     expect(app).toMatchSnapshot();
   });
 
-  it("initilizes the 'state' as a empty list of gifts", () => {
+  it("initilizes the `state` as a empty list of gifts", () => {
     expect(app.state().gifts).toEqual([]);
   });
 
-  describe("when clicking the 'Add Gift' button", () => {
+  describe("when clicking the `Add Gift` button", () => {
 
     beforeEach(() => {
       app.find(".btn-add").simulate("click");
@@ -27,7 +27,7 @@ describe("App", () => {
       app.setState({ gifts : [] });
     });
 
-    it("adds a new gift to 'state'", () => {
+    it("adds a new gift to `state`", () => {
       expect(app.state().gifts).toEqual([{ id: 1 }]);
     });
 
