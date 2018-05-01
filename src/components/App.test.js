@@ -2,7 +2,6 @@ import React from "react";
 import { shallow } from "enzyme";
 import setupTests from "./../setupTests";
 import tempPolyfills from "./../tempPolyfills";
-
 import App from "./App";
 
 describe("App", () => {
@@ -33,6 +32,10 @@ describe("App", () => {
 
     it("adds a new gift to the rendered list", () => {
       expect(app.find(".gift-list").children().length).toEqual(1);
+    });
+
+    it("creates a Gift component", () => {
+      expect(app.find("Gift").exists()).toBe(true);
     });
 
   });
