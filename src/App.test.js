@@ -10,3 +10,7 @@ const app = shallow(<App />);
 it("renders correctly", () => {
   expect(app).toMatchSnapshot();
 });
+
+it("initilizes the 'state' as a empty list of gifts", () => {
+  expect(app.state().gifts).toEqual([]);
+});
