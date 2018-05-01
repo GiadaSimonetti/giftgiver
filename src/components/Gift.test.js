@@ -1,7 +1,5 @@
 import React from "react";
 import { shallow } from "enzyme";
-// import setupTests from "./../setupTests";
-// import tempPolyfills from "./../tempPolyfills";
 import Gift from "./Gift";
 
 describe("Gift", () => {
@@ -14,4 +12,17 @@ describe("Gift", () => {
   it("initializes a person and present in `state`", () => {
     expect(gift.state()).toEqual({ person: '', present: ''});
   });
+
+  describe("when typing into the person input", () => {
+    const person = "Sheldon"
+
+    beforeEach(() => {
+      gift.find(".input-person").simulate("change", { target : { value: person } });
+    });
+
+    it("updates the person in `state`", () => {
+      expect(gift.state().person).toEqual(person);
+    });
+  });
+
 });
