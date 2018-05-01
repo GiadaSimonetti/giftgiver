@@ -14,3 +14,8 @@ it("renders correctly", () => {
 it("initilizes the 'state' as a empty list of gifts", () => {
   expect(app.state().gifts).toEqual([]);
 });
+
+it("adds a new gift to 'state' when click 'Add Gift' button", () => {
+  app.find(".btn-add").simulate("click");
+  expect(app.state().gifts).toEqual([{ id: 1 }]);
+});
