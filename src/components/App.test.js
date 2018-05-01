@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
-import setupTests from "./setupTests";
-import tempPolyfills from "./tempPolyfills";
+import setupTests from "./../setupTests";
+import tempPolyfills from "./../tempPolyfills";
 
 import App from "./App";
 
